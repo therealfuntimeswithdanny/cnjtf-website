@@ -3,489 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CNJTF - Concord Joint Task Force</title>
+    <title>RSD - Concord Joint Task Force | Rescue Service Division</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="RSD  - Concord Joint Task Force | Rescue Service Division">
+    <meta name="keywords" content="CNJTF, Concord, Civil Defense, Task Force, Emergency Response, Public Safety, Government Agency">
+    <meta name="author" content="CNJTF">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cnjtf.madebydanny.uk">
+    <meta property="og:title" content="RSD - Concord Joint Task Force | Rescue Service Division">
+    <meta property="og:description" content="A government-run civil defense organization. Our goal is to keep the citizens of Concord safe from natural and man-made threats.">
+    <meta property="og:image" content="/media/rsd/og.png">
+    <meta property="og:site_name" content="CNJTF">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cnjtf.madebydanny.uk">
+    <meta property="twitter:title" content="RSD - Concord Joint Task Force | Rescue Service Division">
+    <meta property="twitter:description" content="A government-run civil defense organization. Our goal is to keep the citizens of Concord safe from natural and man-made threats.">
+    <meta property="twitter:image" content="/media/rsd/og.png">
+    
+    <!-- Discord / Mastodon -->
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cnjtf.madebydanny.uk">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/media/rsd/logo.webpp">
+    <link rel="apple-touch-icon" href="/media/rsd/logo.webp">
+    
+    <!-- Additional Resources -->
     <script src="https://kit.fontawesome.com/0ca27f8db1.js" crossorigin="anonymous"></script>
-    <style>
-        :root {
-            --primary: #7f0000;
-            --primary-dark: #8d3f3f;
-            --bg-black: #000000;
-            --bg-gray: #0a0a0a;
-            --bg-card: #111111;
-            --text-white: #ffffff;
-            --text-gray: #a1a1aa;
-            --text-light: #d4d4d8;
-            --border: #8d3f3f;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: var(--bg-black);
-            color: var(--text-white);
-            line-height: 1.7;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 0;
-            z-index: 1000;
-        }
-
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-white);
-            letter-spacing: -0.5px;
-        }
-
-        .logo img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 8rem 0 6rem;
-            background:
-                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-                url('https://media.discordapp.net/attachments/1324271316492095489/1464268163242918073/611.png?ex=697c19be&is=697ac83e&hm=cf7bf8bb66f5c5c9e8b5c997d233e8367b46640422d0c439fe80fd267762690d&=&format=webp&quality=lossless&width=1078&height=606');
-            background-size: cover;
-            background-position: center;
-            background-attachment: scroll;
-            text-align: center;
-            margin-top: 64px;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--text-white);
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--text-white);
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero .tagline {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 2.5rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 2rem;
-            background: var(--primary);
-            color: white;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .cta-button:hover {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-white);
-            margin-bottom: 0.5rem;
-            text-align: center;
-            letter-spacing: -0.5px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-gray);
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
-
-        /* About Section */
-        #about {
-            background: var(--bg-gray);
-        }
-
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 2rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-        }
-
-        /* Subdivisions Grid */
-        #subdivisions {
-            background: var(--bg-black);
-        }
-
-        .subdivisions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .subdivision-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.2s ease;
-        }
-
-        .subdivision-card:hover {
-            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
-            transform: translateY(-4px);
-            border-color: var(--primary);
-        }
-
-        .subdivision-card h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-white);
-            margin-bottom: 0.75rem;
-        }
-
-        .subdivision-card .badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary);
-            font-size: 0.8rem;
-            font-weight: 600;
-            border-radius: 20px;
-            margin-bottom: 1rem;
-        }
-
-        .subdivision-card p {
-            color: var(--text-gray);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .subdivision-card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .subdivision-card ul li {
-            color: var(--text-gray);
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            font-size: 0.95rem;
-        }
-
-        .subdivision-card ul li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        /* Quick Links */
-        #links {
-            background: var(--bg-gray);
-        }
-
-        .quick-links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .quick-link {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            text-decoration: none;
-            color: var(--text-white);
-            transition: all 0.2s ease;
-        }
-
-        .quick-link:hover {
-            border-color: var(--primary);
-            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .quick-link .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .quick-link h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-white);
-        }
-
-        .quick-link p {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-        }
-
-        /* Media Gallery */
-        #media {
-            background: var(--bg-black);
-        }
-
-        .media-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .media-item {
-            position: relative;
-            aspect-ratio: 16/9;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .media-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.2);
-            border-color: var(--primary);
-        }
-
-        .media-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-card);
-            font-size: 3rem;
-            color: var(--text-gray);
-        }
-
-        .media-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-            color: white;
-            font-weight: 600;
-            font-size: 0.9rem;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-
-        .media-item:hover .media-caption {
-            opacity: 1;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--bg-gray);
-            border-top: 1px solid var(--border);
-            padding: 3rem 0 2rem;
-            margin-top: 0;
-            text-align: center;
-        }
-
-        footer .footer-content {
-            margin-bottom: 2rem;
-        }
-
-        footer h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-white);
-            margin-bottom: 0.5rem;
-        }
-
-        footer p {
-            color: var(--text-gray);
-            margin-bottom: 0.25rem;
-            font-size: 0.95rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-
-        .footer-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-
-        .copyright {
-            color: var(--text-gray);
-            font-size: 0.85rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.25rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-                flex-wrap: wrap;
-            }
-
-            .subdivisions-grid,
-            .quick-links-grid,
-            .media-gallery,
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/CSS/rsd.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="container">
             <div class="logo">
-                <img src="https://media.discordapp.net/attachments/1404328302948253827/1408251443458211951/jtf_rsd.png?ex=697bffdc&is=697aae5c&hm=924d6d7177c2b16e99110508176ac6d45fefc9d7b9416c2cdab4d81544041b9a&=&format=webp&quality=lossless&width=710&height=710" alt="CNJTF Logo">
-                JTF-RSD
+                <img src="/media/rsd/logo.webp" alt="RSD Logo">
+                RSD - JTF
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About RSD</a></li>
-                <li><a href="#subdivisions">FMU</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#subdivisions">FPT</a></li>
-                <li><a href="#links">Resources</a></li>
+                <li><a href="#fmu">FMU</a></li>
                 <li><a href="#media">Media</a></li>
             </ul>
         </div>
@@ -494,14 +67,17 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>JTF-RSD</h1>
-            <div class="subtitle">Concord Joint Task Force Rescue Service Division </div>
-            <div class="tagline">idk what to put here</div>
-            <a href="https://discord.gg/your-invite-link" class="cta-button">
-                Subdivisions<i class="fa-solid fa-arrows-split-up-and-left"></i>
+            <h1>Rescue Service Division</h1>
+            <div class="subtitle">Joint Task Force Rescue Service Division</div>
+            <div class="tagline">To defend the innocent</div>
+            <a href="#FPT" class="cta-button">
+                FPT <i class="fa-solid fa-fire"></i>
             </a>
-            <a href="https://discord.gg/your-invite-link" class="cta-button">
-                About <i class="fa-solid fa-book"></i>
+            <a href="#about" class="cta-button">
+                Learn More <i class="fa-solid fa-info"></i>
+            </a>
+            <a href="#FMU" class="cta-button">
+                FMU <i class="fa-solid fa-star-of-life"></i>
             </a>
         </div>
     </section>
@@ -510,13 +86,28 @@
     <section id="about">
         <div class="container">
             <h2 class="section-title">About RSD</h2>
-            <p class="section-subtitle">JTF Rescue Service Division</p>
+            <p class="section-subtitle">Who we are and what we stand for</p>
             
             <div class="about-content">
                 <p>
-Welcome to the Rescue Service Division of the Concord Joint Task Force. This is a roleplay-focused subdivision. Agents in this division will be deployed for Fire & EMS style operations.
+                The Concord Joint Task Force (CNJTF) is a government-run civil defense organization. <br> Our goal is to keep the citizens of Concord safe from natural and manmade threats.
                 </p>
                 <p></p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Medical Personnel</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Sub Units</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Firefighters</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -525,98 +116,75 @@ Welcome to the Rescue Service Division of the Concord Joint Task Force. This is 
     <section id="subdivisions">
         <div class="container">
             <h2 class="section-title">Subdivisions</h2>
-            <p class="section-subtitle">Specialized units operating in perfect coordination</p>
+            <p class="section-subtitle">Below is a list of our active subdivisions. The list below displays each one of our available subdivisions</p>
             
             <div class="subdivisions-grid">
                 <div class="subdivision-card">
-                    <div class="badge">RIU</div>
+                    <div class="badge" id="riu">RIU</div>
                     <h3>Rapid Intervention Unit</h3>
-                    <p>Elite tactical unit specializing in high-risk operations, reconnaissance, and rapid response missions. Our operators are trained for the most demanding scenarios.</p>
+                    <a href="/subdivisions/riu.html">Learn more about RIU</a>
+                    <p>This division is a specialized field policing unit. Agents in this subdivision are trained to handle high-paced police action such as pursuits, intercepting criminals, and much more.</p>
+                    <h4>SUB-UNITS</h4>
                     <ul>
-                        <li>Advanced combat tactics</li>
-                        <li>Covert reconnaissance</li>
-                        <li>Hostage rescue operations</li>
-                        <li>Counter-terrorism missions</li>
+                        <li>Advanced Patrol Team <i>(APT)</i></li>
+                        <li>Fugitive Prevention and Recovery Service <i>(FPRS)</i></li>
                     </ul>
                 </div>
 
                 <div class="subdivision-card">
-                    <div class="badge">RSD</div>
+                    <div class="badge" id="rsd">RSD</div>
                     <h3>Rescue Service Division</h3>
-                    <p>Maintaining order and discipline within the task force. Our MPs ensure security protocols are followed and handle internal investigations with precision.</p>
+                    <a href="/subdivisions/rsd.html">Learn more about RSD</a>
+                    <p>This division houses the Fire-rescue and EMS portion of the agency. Agents in this subdivision are trained in fire prevention, special rescue, and medical response instead of law enforcement.</p>
+                    <h4>SUB-UNITS</h4>
                     <ul>
-                        <li>Base security operations</li>
-                        <li>Law enforcement protocols</li>
-                        <li>Investigation services</li>
-                        <li>Detention management</li>
+                        <li>Field Medical Unit <i>(FMU)</i></li>
+                        <li>Emergency Service Unit <i>(ESU)</i></li>
+                        <li>Fire Prevention Team <i>(FPT)</i></li>
+                    </ul>
+                </div>
+
+                <div class="subdivision-card">
+                    <div class="badge" id="socom">SOCOM</div>
+                    <a href="/subdivisions/socom.html">Learn more about SOCOM</a>
+                    <h3>Special Operations Command</h3>
+                    <p>This division houses the agency's special operations forces. Agents in this subdivision are trained for combat and high-risk operations such as tactical deployments and protection operations.</p>
+                    <h4>SUB-UNITS</h4>
+                    <ul>
+                        <li>Tactical Response Force <i>(TRF)</i></li>
+                        <li>Advanced Combat Team <i>(ACT)</i></li>
+                    </ul>
+                </div>
+
+                <div class="subdivision-card">
+                    <div class="badge" id="taps">TAPS</div>
+                    <a href="/subdivisions/taps.html">Learn more about TAPS</a>
+                    <h3>Threat Analysis and Prevention Service</h3>
+                    <p>This division is a skilled intelligence service. Agents in this subdivision collect information on pending threats and develop plans to counter them.</p>
+                    <h4>SUB-UNITS</h4>
+                    <ul>
+                        <li>CLASSIFIED</li>
+                    </ul>
+                </div>
+
+                <div class="subdivision-card">
+                    <div class="badge">RRD</div>
+                    <a href="/subdivisions/rrd.html">Learn more about RRD</a>
+                    <h3>Rapid Response Directorate</h3>
+                    <p>This division is a special team formed by the Office of the Director. Agents in this subdivision are the best of the best in their field, and report directly to the Agency Director.</p>
+                    <h4>SUB-UNITS</h4>
+                    <ul>
+                        <li>CLASSIFIED</li>
                     </ul>
                 </div>
               </div>
         </div>
     </section>
 
-    <!-- Quick Links Section -->
-    <section id="links">
-        <div class="container">
-            <h2 class="section-title">Resources</h2>
-            <p class="section-subtitle">Essential resources and connections</p>
-            
-            <div class="quick-links-grid">
-                <a href="https://www.roblox.com/games/your-game-id" class="quick-link">
-                    <div class="icon">🎮</div>
-                    <h3>Play Game</h3>
-                    <p>Join CNJTF on Roblox</p>
-                </a>
-
-                <a href="https://discord.gg/your-invite-link" class="quick-link">
-                    <div class="icon">💬</div>
-                    <h3>Discord Server</h3>
-                    <p>Connect with the community</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">📋</div>
-                    <h3>Recruitment</h3>
-                    <p>Join our ranks</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">📖</div>
-                    <h3>Training Manual</h3>
-                    <p>Learn tactics and procedures</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">🏆</div>
-                    <h3>Leaderboards</h3>
-                    <p>View top operatives</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">📰</div>
-                    <h3>News & Updates</h3>
-                    <p>Latest developments</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">⚙️</div>
-                    <h3>Rules & Regulations</h3>
-                    <p>Code of conduct</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">🎯</div>
-                    <h3>Mission Archive</h3>
-                    <p>Past operations</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- Media Section -->
     <section id="media">
         <div class="container">
-            <h2 class="section-title">Media Gallery</h2>
+            <h2 class="section-title">comming soon</h2>
             <p class="section-subtitle">Screenshots from operations and training</p>
             
             <div class="media-gallery">
@@ -671,15 +239,9 @@ Welcome to the Rescue Service Division of the Concord Joint Task Force. This is 
             </p>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="copyright">
-                © 2026 CNJTF - Concord Joint Task Force. All rights reserved.
-                                <p>This is a fan made website, and is not offical</p>
-            </div>
-        </div>
+        <p>© 2026 CNJTF - Concord Joint Task Force. All rights reserved.</p>
     </footer>
 
     <script>

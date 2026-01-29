@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://cnjtf.madebydanny.uk">
     <meta property="og:title" content="CNJTF - Concord Joint Task Force">
     <meta property="og:description" content="A government-run civil defense organization. Our goal is to keep the citizens of Concord safe from natural and man-made threats.">
-    <meta property="og:image" content="/media/og-image.png">
+    <meta property="og:image" content="/media/og/jtf.png">
     <meta property="og:site_name" content="CNJTF">
     <meta property="og:locale" content="en_US">
     
@@ -27,7 +27,7 @@
     <meta property="twitter:url" content="https://cnjtf.madebydanny.uk">
     <meta property="twitter:title" content="CNJTF - Concord Joint Task Force">
     <meta property="twitter:description" content="A government-run civil defense organization. Our goal is to keep the citizens of Concord safe from natural and man-made threats.">
-    <meta property="twitter:image" content="/media/og-image.png">
+    <meta property="twitter:image" content="/media/og/jtf.png">
     
     <!-- Discord / Mastodon -->
     <meta name="theme-color" content="#2563eb">
@@ -36,26 +36,28 @@
     <link rel="canonical" href="https://cnjtf.madebydanny.uk">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/emojis/1386840893872410745.webp">
-    <link rel="apple-touch-icon" href="https://cdn.discordapp.com/emojis/1386840893872410745.webp">
+    <link rel="icon" type="image/png" href="/media/logos/jtf.png">
+    <link rel="apple-touch-icon" href="/media/logos/jtf.png">
     
     <!-- Additional Resources -->
     <script src="https://kit.fontawesome.com/0ca27f8db1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="container">
             <div class="logo">
-                <img src="https://cdn.discordapp.com/emojis/1386840893872410745.webp" alt="CNJTF Logo">
+                <img src="/media/logos/jtf.png" alt="CNJTF Logo">
                 CNJTF
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#subdivisions">Subdivisions</a></li>
-                <li><a href="#links">Resources</a></li>
                 <li><a href="#media">Media</a></li>
             </ul>
         </div>
@@ -87,11 +89,11 @@
 
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <div class="stat-number">5</div>
+                        <div class="stat-number">6</div>
                         <div class="stat-label">Specialized Divisions</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">100+</div>
+                        <div class="stat-number">300+</div>
                         <div class="stat-label">Active Members</div>
                     </div>
                     <div class="stat-card">
@@ -107,12 +109,13 @@
     <section id="subdivisions">
         <div class="container">
             <h2 class="section-title">Subdivisions</h2>
-            <p class="section-subtitle">Below is a list of our active subdivisions. The list below displays each one of our available subdivisions</p>
+            <p class="section-subtitle">The list below displays each one of our available subdivisions</p>
             
             <div class="subdivisions-grid">
                 <div class="subdivision-card">
                     <div class="badge" id="riu">RIU</div>
                     <h3>Rapid Intervention Unit</h3>
+                    <a href="/subdivisions/riu.html">Learn more about RIU</a>
                     <p>This division is a specialized field policing unit. Agents in this subdivision are trained to handle high-paced police action such as pursuits, intercepting criminals, and much more.</p>
                     <h4>SUB-UNITS</h4>
                     <ul>
@@ -124,6 +127,7 @@
                 <div class="subdivision-card">
                     <div class="badge" id="rsd">RSD</div>
                     <h3>Rescue Service Division</h3>
+                    <a href="/subdivisions/rsd.html">Learn more about RSD</a>
                     <p>This division houses the Fire-rescue and EMS portion of the agency. Agents in this subdivision are trained in fire prevention, special rescue, and medical response instead of law enforcement.</p>
                     <h4>SUB-UNITS</h4>
                     <ul>
@@ -136,6 +140,7 @@
                 <div class="subdivision-card">
                     <div class="badge" id="socom">SOCOM</div>
                     <h3>Special Operations Command</h3>
+                    <a href="/subdivisions/socom.html">Learn more about SOCOM</a>
                     <p>This division houses the agency's special operations forces. Agents in this subdivision are trained for combat and high-risk operations such as tactical deployments and protection operations.</p>
                     <h4>SUB-UNITS</h4>
                     <ul>
@@ -147,6 +152,7 @@
                 <div class="subdivision-card">
                     <div class="badge" id="taps">TAPS</div>
                     <h3>Threat Analysis and Prevention Service</h3>
+                    <a href="/subdivisions/taps.html">Learn more about TAPS</a>
                     <p>This division is a skilled intelligence service. Agents in this subdivision collect information on pending threats and develop plans to counter them.</p>
                     <h4>SUB-UNITS</h4>
                     <ul>
@@ -157,136 +163,97 @@
                 <div class="subdivision-card">
                     <div class="badge">RRD</div>
                     <h3>Rapid Response Directorate</h3>
-                    <p>This division is a special team formed by the Office of the Director. Agents in this subdivision are the best of the best in their field, and report directly to the Agency Director.</p>
+                    <a href="/subdivisions/rrd.html">Learn more about RRD</a>
+                    <p>FTU is the division that's in charge for recruiting and teaching new agents for JTF. YOU can be the ones who will teach new members of our agency!</p>
                     <h4>SUB-UNITS</h4>
                     <ul>
                         <li>CLASSIFIED</li>
                     </ul>
                 </div>
+                <div class="subdivision-card">
+                    <div class="badge">FTU</div>
+                    <h3>Field Training Unit</h3>
+                    <a href="/subdivisions/ftu.html">Learn more about FTU</a>
+                    <p>This division is a special team formed by the Office of the Director. Agents in this subdivision are the best of the best in their field, and report directly to the Agency Director.</p>
+                </div>
               </div>
-        </div>
-    </section>
-
-    <!-- Quick Links Section -->
-    <section id="links">
-        <div class="container">
-            <h2 class="section-title">ANTHING BEOND THIS POINT IS STILL IN DEVELOPMENT</h2>
-            <p class="section-subtitle">Essential resources and connections</p>
-            
-            <div class="quick-links-grid">
-                <a href="https://www.roblox.com/games/your-game-id" class="quick-link">
-                    <div class="icon">🎮</div>
-                    <h3>Play Game</h3>
-                    <p>Join CNJTF on Roblox</p>
-                </a>
-
-                <a href="https://discord.gg/your-invite-link" class="quick-link">
-                    <div class="icon">💬</div>
-                    <h3>Discord Server</h3>
-                    <p>Connect with the community</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">📋</div>
-                    <h3>Recruitment</h3>
-                    <p>Join our ranks</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">📖</div>
-                    <h3>Training Manual</h3>
-                    <p>Learn tactics and procedures</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">🏆</div>
-                    <h3>Leaderboards</h3>
-                    <p>View top operatives</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">📰</div>
-                    <h3>News & Updates</h3>
-                    <p>Latest developments</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">⚙️</div>
-                    <h3>Rules & Regulations</h3>
-                    <p>Code of conduct</p>
-                </a>
-
-                <a href="#" class="quick-link">
-                    <div class="icon">🎯</div>
-                    <h3>Mission Archive</h3>
-                    <p>Past operations</p>
-                </a>
-            </div>
         </div>
     </section>
 
     <!-- Media Section -->
     <section id="media">
         <div class="container">
-            <h2 class="section-title">Media Gallery</h2>
-            <p class="section-subtitle">Screenshots from operations and training</p>
+            <h2 class="section-title">JTF Media</h2>
+            <p class="section-subtitle">Screenshots taken by JTF memebers</p>
             
             <div class="media-gallery">
                 <div class="media-item">
-                    <div class="media-placeholder">📷</div>
-                    <div class="media-caption">Base Operations Center</div>
+                    <img src="/media/examples/FTU-1.jpg" alt="Base Operations Center">
+                    <div class="media-caption">Field Training Unit</div>
                 </div>
 
                 <div class="media-item">
-                    <div class="media-placeholder">📷</div>
-                    <div class="media-caption">Special Operations Training</div>
+                    <img src="/media/examples/RIU-1.jpg" alt="Base Operations Center">
+                    <div class="media-caption">Rapid Intervention Unit</div>
                 </div>
 
                 <div class="media-item">
-                    <div class="media-placeholder">📷</div>
-                    <div class="media-caption">Air Support Mission</div>
+                    <img src="/media/examples/RRD-1.png" alt="Base Operations Center">
+                    <div class="media-caption">Rapid Response Directorate & Special Operations Command</div>
                 </div>
 
                 <div class="media-item">
-                    <div class="media-placeholder">📷</div>
-                    <div class="media-caption">Formation Drill</div>
+                    <img src="/media/examples/RSD-1.png" alt="Base Operations Center">
+                    <div class="media-caption">Rescue Service Division Field Medical Unit</div>
                 </div>
 
                 <div class="media-item">
-                    <div class="media-placeholder">📷</div>
-                    <div class="media-caption">Combat Patrol</div>
+                    <img src="/media/examples/SOCOM-1.jpg" alt="Base Operations Center">
+                    <div class="media-caption">Special Operations Command Advanced Combat Team </div>
                 </div>
 
                 <div class="media-item">
-                    <div class="media-placeholder">📷</div>
-                    <div class="media-caption">Medical Training Exercise</div>
+                    <img src="/media/examples/TAPS-1.png" alt="Base Operations Center">
+                    <div class="media-caption">Threat Analysis and Prevention Service</div>
                 </div>
 
                 <div class="media-item">
-                    <div class="media-placeholder">📷</div>
-                    <div class="media-caption">Night Operations</div>
+                    <img src="/media/examples/RIU-2.jpg" alt="Base Operations Center">
+                    <div class="media-caption">Rapid Intervention Unit</div>
                 </div>
 
                 <div class="media-item">
-                    <div class="media-placeholder">📷</div>
-                    <div class="media-caption">Joint Task Force Assembly</div>
+                    <img src="/media/examples/FTU-2.png" alt="Base Operations Center">
+                    <div class="media-caption">Field Training Unit</div>
                 </div>
 
                 <div class="media-item">
-                    <div class="media-placeholder">📷</div>
-                    <div class="media-caption">Engineering Operations</div>
+                    <img src="/media/examples/RRD-2.jpg" alt="Base Operations Center">
+                    <div class="media-caption">Rapid Response Directorate</div>
+                </div>
+                <div class="media-item">
+                    <img src="/media/examples/RSD-2.png" alt="Base Operations Center">
+                    <div class="media-caption">Rescue Service Division Fire Prevention Team</div>
+                </div>
+                <div class="media-item">
+                    <img src="/media/examples/SOCOM-2.jpg" alt="Base Operations Center">
+                    <div class="media-caption">Special Operations Command Advanced Combat Team </div>
+                </div>
+                <div class="media-item">
+                    <img src="/media/examples/TAPS-2.png" alt="Base Operations Center">
+                    <div class="media-caption">Threat Analysis and Prevention Service</div>
                 </div>
             </div>
 
             <p style="text-align: center; margin-top: 2rem; color: var(--text-gray);">
-                Replace the placeholder camera icons with your actual Roblox game screenshots
+                All Images are sourced from the official CNJTF Discord Server, #offical-media
             </p>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <p>© 2026 CNJTF - Concord Joint Task Force. All rights reserved.</p>
+        <b>THIS IS A UNOFFICAL SITE, AND IS NOT OWNED BY JTF</b>
     </footer>
 
     <script>
