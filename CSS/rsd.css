@@ -178,7 +178,7 @@
         .section-subtitle {
             text-align: center;
             color: white;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: 35px;
             margin-bottom: 3rem;
         }
 
