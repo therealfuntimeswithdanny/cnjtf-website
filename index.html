@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://cnjtf.madebydanny.uk">
     <meta property="og:title" content="CNJTF - Concord Joint Task Force Website">
     <meta property="og:description" content="A government-run civil defense organization. Our goal is to keep the citizens of Concord safe from natural and man-made threats.">
-    <meta property="og:image" content="https:/public-cdn.madebydanny.uk/jtf-media/media/og/jtf.png">
+    <meta property="og:image" content="https://public-cdn.madebydanny.uk/jtf-media/media/og/jtf.png">
     <meta property="og:site_name" content="CNJTF">
     <meta property="og:locale" content="en_US">
     
@@ -27,7 +27,7 @@
     <meta property="twitter:url" content="https://cnjtf.madebydanny.uk">
     <meta property="twitter:title" content="CNJTF - Concord Joint Task Force Website">
     <meta property="twitter:description" content="A government-run civil defense organization. Our goal is to keep the citizens of Concord safe from natural and man-made threats.">
-    <meta property="twitter:image" content="https:/public-cdn.madebydanny.uk/jtf-media/media/og/jtf.png">
+    <meta property="twitter:image" content="https://public-cdn.madebydanny.uk/jtf-media/media/og/jtf.png">
     
     <!-- Discord / Mastodon -->
     <meta name="theme-color" content="#2563eb">
@@ -325,14 +325,30 @@
             previewImage.src = '';
         }
 
-        document.querySelectorAll('#media .media-item img').forEach(image => {
-            image.addEventListener('click', () => {
-                const caption = image.closest('.media-item').querySelector('.media-caption')?.textContent?.trim() || 'CNJTF Media image';
-                previewImage.src = image.src;
+        function getPreviewSource(image) {
+            const source = image.currentSrc || image.src;
+            try {
+                const parsed = new URL(source);
+                const directUrl = parsed.searchParams.get('url');
+                return directUrl ? decodeURIComponent(directUrl) : source;
+            } catch {
+                return source;
+            }
+        }
+
+        document.querySelectorAll('#media .media-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const image = item.querySelector('img');
+                if (!image) return;
+
+                const caption = item.querySelector('.media-caption')?.textContent?.trim() || 'CNJTF Media image';
+                const previewSrc = getPreviewSource(image);
+
+                previewImage.src = previewSrc;
                 previewImage.alt = caption;
                 previewCaption.textContent = caption;
-                previewOpenNew.href = image.src;
-                previewDownload.href = image.src;
+                previewOpenNew.href = previewSrc;
+                previewDownload.href = previewSrc;
                 previewDownload.setAttribute('download', caption.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.jpg');
                 previewModal.classList.add('active');
                 previewModal.setAttribute('aria-hidden', 'false');
