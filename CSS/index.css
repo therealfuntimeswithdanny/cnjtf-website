@@ -159,8 +159,30 @@ section {
 #divisions,
 #subdivisions,
 #media {
-    background: linear-gradient(180deg, rgba(12, 23, 43, 0.8), rgba(10, 19, 38, 0.95));
     border-top: 1px solid rgba(125, 161, 221, 0.08);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about {
+    background-image: linear-gradient(rgba(8, 16, 31, 0.72), rgba(8, 16, 31, 0.85)),
+        url('https://imrs.madebydanny.uk?url=https://public-cdn.madebydanny.uk/jtf-media/media/blue.png');
+}
+
+#divisions {
+    background-image: linear-gradient(rgba(7, 14, 28, 0.7), rgba(7, 14, 28, 0.88)),
+        url('https://imrs.madebydanny.uk?url=https://public-cdn.madebydanny.uk/jtf-media/media/sub-div.png');
+}
+
+#subdivisions {
+    background-image: linear-gradient(rgba(8, 16, 31, 0.73), rgba(8, 16, 31, 0.9)),
+        url('https://imrs.madebydanny.uk?url=https://public-cdn.madebydanny.uk/jtf-media/media/blue.png');
+}
+
+#media {
+    background-image: linear-gradient(rgba(7, 14, 28, 0.74), rgba(7, 14, 28, 0.92)),
+        url('https://imrs.madebydanny.uk?url=https://public-cdn.madebydanny.uk/jtf-media/media/sub-div.png');
 }
 
 .about-content {
@@ -172,7 +194,8 @@ section {
 
 .stats-grid,
 .subdivisions-grid,
-.media-grid {
+.media-grid,
+.media-gallery {
     margin-top: 2rem;
     display: grid;
     gap: 1.3rem;
@@ -186,7 +209,8 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.media-grid {
+.media-grid,
+.media-gallery {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
@@ -248,11 +272,78 @@ section {
     height: 200px;
     object-fit: cover;
     display: block;
+    cursor: zoom-in;
 }
 
 .media-caption {
     padding: 0.9rem 1rem;
     color: var(--text-muted);
+}
+
+
+.media-preview-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 5, 10, 0.82);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+    padding: 1rem;
+}
+
+.media-preview-modal.active {
+    display: flex;
+}
+
+.media-preview-content {
+    width: min(980px, 96vw);
+    background: rgba(11, 22, 40, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.media-preview-content img {
+    width: 100%;
+    max-height: 68vh;
+    object-fit: contain;
+    background: #040812;
+}
+
+.media-preview-details {
+    padding: 1rem;
+}
+
+.media-preview-details p {
+    margin-bottom: 0.9rem;
+    color: var(--text-muted);
+}
+
+.media-preview-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.preview-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #f3f8ff;
+    border: 1px solid rgba(140, 176, 243, 0.4);
+    background: rgba(45, 79, 159, 0.45);
+    font-weight: 600;
+}
+
+.preview-close {
+    margin-left: auto;
+    background: rgba(34, 47, 79, 0.85);
 }
 
 footer {

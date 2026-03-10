@@ -22,7 +22,7 @@ nav .container{display:flex;justify-content:space-between;align-items:center}
 .subtitle{margin-top:.75rem;font-size:clamp(1.2rem,3vw,1.8rem)}
 .tagline{margin:1.1rem 0 2rem;color:var(--muted)}
 .cta-button{display:inline-flex;gap:.5rem;align-items:center;padding:.8rem 1.35rem;border-radius:999px;text-decoration:none;color:#fff;background:linear-gradient(120deg,var(--primary),var(--accent));font-weight:700;margin:.35rem;box-shadow:0 10px 24px rgba(127,29,29,.45)}
-section{padding:4.2rem 0;background:linear-gradient(180deg,rgba(24,10,13,.85),rgba(17,8,11,.95));border-top:1px solid rgba(249,113,113,.12)}
+section{padding:4.2rem 0;background:linear-gradient(rgba(24,10,13,.78),rgba(17,8,11,.92)),url('https://imrs.madebydanny.uk?url=https://public-cdn.madebydanny.uk/jtf-media/media/TAPS/banner.png') center/cover fixed no-repeat;border-top:1px solid rgba(249,113,113,.12)}
 .section-title{text-align:center;font-size:clamp(1.9rem,5vw,2.8rem)}
 .section-subtitle{text-align:center;margin:.7rem auto 2rem;color:var(--muted)}
 .about-content{max-width:760px;margin:0 auto;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.4rem}

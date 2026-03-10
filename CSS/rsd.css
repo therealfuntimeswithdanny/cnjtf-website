@@ -22,7 +22,7 @@ nav .container{display:flex;justify-content:space-between;align-items:center}
 .subtitle{margin:.8rem 0;color:#ffedd5;font-size:clamp(1.1rem,3vw,1.7rem)}
 .tagline{color:var(--muted);margin-bottom:2rem}
 .cta-button{display:inline-flex;align-items:center;gap:.45rem;margin:.3rem;padding:.78rem 1.3rem;border-radius:999px;background:linear-gradient(120deg,var(--primary),var(--accent));color:#fff;text-decoration:none;font-weight:700;box-shadow:0 12px 24px rgba(154,52,18,.4)}
-section{padding:4.4rem 0;background:linear-gradient(180deg,rgba(30,20,12,.86),rgba(20,14,10,.96));border-top:1px solid rgba(251,146,60,.12)}
+section{padding:4.4rem 0;background:linear-gradient(rgba(30,20,12,.8),rgba(20,14,10,.93)),url('https://imrs.madebydanny.uk?url=https://public-cdn.madebydanny.uk/jtf-media/media/RSD/about.png') center/cover fixed no-repeat;border-top:1px solid rgba(251,146,60,.12)}
 .section-title{text-align:center;font-size:clamp(2rem,4.8vw,3rem)}
 .section-subtitle{text-align:center;color:var(--muted);margin:.7rem auto 2rem;max-width:720px}
 .about-content{max-width:860px;margin:0 auto;text-align:center;color:var(--muted)}

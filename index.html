@@ -251,6 +251,27 @@
             </p>
         </div>
     </section>
+
+    <div class="media-preview-modal" id="mediaPreview" aria-hidden="true">
+        <div class="media-preview-content" role="dialog" aria-modal="true" aria-label="Image preview">
+            <img id="previewImage" src="" alt="Preview image">
+            <div class="media-preview-details">
+                <p id="previewCaption"></p>
+                <div class="media-preview-actions">
+                    <a class="preview-action" id="previewOpenNew" href="#" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in new tab
+                    </a>
+                    <a class="preview-action" id="previewDownload" href="#" download>
+                        <i class="fa-solid fa-download"></i> Download
+                    </a>
+                    <button class="preview-action preview-close" id="previewClose" type="button">
+                        <i class="fa-solid fa-xmark"></i> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>© 2026 CNJTF - Concord Joint Task Force. All rights reserved.</p>
@@ -278,7 +299,6 @@
         referrerPolicy="no-referrer-when-downgrade"></a></div>
     </noscript>
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -290,6 +310,44 @@
                     });
                 }
             });
+        });
+
+        const previewModal = document.getElementById('mediaPreview');
+        const previewImage = document.getElementById('previewImage');
+        const previewCaption = document.getElementById('previewCaption');
+        const previewOpenNew = document.getElementById('previewOpenNew');
+        const previewDownload = document.getElementById('previewDownload');
+        const previewClose = document.getElementById('previewClose');
+
+        function closePreview() {
+            previewModal.classList.remove('active');
+            previewModal.setAttribute('aria-hidden', 'true');
+            previewImage.src = '';
+        }
+
+        document.querySelectorAll('#media .media-item img').forEach(image => {
+            image.addEventListener('click', () => {
+                const caption = image.closest('.media-item').querySelector('.media-caption')?.textContent?.trim() || 'CNJTF Media image';
+                previewImage.src = image.src;
+                previewImage.alt = caption;
+                previewCaption.textContent = caption;
+                previewOpenNew.href = image.src;
+                previewDownload.href = image.src;
+                previewDownload.setAttribute('download', caption.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.jpg');
+                previewModal.classList.add('active');
+                previewModal.setAttribute('aria-hidden', 'false');
+            });
+        });
+
+        previewClose.addEventListener('click', closePreview);
+        previewModal.addEventListener('click', (event) => {
+            if (event.target === previewModal) closePreview();
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && previewModal.classList.contains('active')) {
+                closePreview();
+            }
         });
     </script>
 </body>
