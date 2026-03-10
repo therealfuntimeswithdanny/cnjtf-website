@@ -91,7 +91,7 @@ nav .container {
     place-items: center;
     text-align: center;
     background: linear-gradient(rgba(7, 13, 25, 0.5), rgba(7, 13, 25, 0.68)),
-        url('https://imrs.madebydanny.uk?url=https:/public-cdn.madebydanny.uk/jtf-media/media/sub-div.png') center/cover no-repeat;
+        url('https://imrs.madebydanny.uk?url=https://public-cdn.madebydanny.uk/jtf-media/media/sub-div.png') center/cover no-repeat;
 }
 
 .hero-content {
